@@ -23,34 +23,36 @@ function Question(question, questionerUsername, date) {
     this.answers.push(answer);
   };
 
+  // this.find = (username) => {
+  //   let foundAnswers = [];
+  //   for (let answer of this.answers) {
+  //     if (answer.respondentUsername === username) {
+  //       foundAnswers.push(answer);
+  //     }
+  //   }
+  //   return foundAnswers;
+  // };
+
   this.find = (username) => {
-    let foundAnswers = [];
-    for (let answer of this.answers) {
-      if (answer.respondentUsername === username) {
-        foundAnswers.push(answer);
-      }
-    }
-    return foundAnswers;
+    return this.answers.filter(
+      (answer) => answer.respondentUsername === username
+    );
   };
 
-  // TO DO
-  //   this.find = (username) => {
-  //     return this.answers.filter(
-  //       (answer) => answer.respondentUsername == username
-  //     );
-  //   };
+  this.afterDate = (date) => {
+    return this.answers.filter((answer) => answer.date.isAfter(dayjs(date)));
+  };
 
-  //   this.afterDate = (date) => {
-  //     return this.answers.filter((answer) => answer.date.isAfter(date));
-  //   };
+  this.listByDate = () => {
+    // return this.answers.sort((a, b) => a.date.diff(b.date, "date"));
 
-  //   this.listByDate = () => {
-  //     return this.answers.sort((a, b) => a.date.diff(b.date, "date"));
-  //   };
+    // uso l'operatore di spread per creare una copia dell'array
+    return [...this.answers].sort((a, b) => (a.date.isAfter(b.date) ? 1 : -1));
+  };
 
-  //   this.listByScore = () => {
-  //     return this.answers.sort((a, b) => b.score - a.score);
-  //   };
+  this.listByScore = () => {
+    return [...this.answers].sort((a, b) => b.score - a.score);
+  };
 }
 
 let question = new Question(
@@ -78,4 +80,8 @@ console.log(question);
 
 // vedo che ci sono due oggetti ma non ne vedo il contenuto --> fa la conversione a stringa perche sto
 // concatendando gli oggetti ad una stringa :)
-console.log("\nAnswers by Luca: " + answersByLuca);
+console.log("\nAnswers by Luca: " + answersByLuca); // OK
+
+console.log(question.listByDate()); // OK
+console.log(question.listByScore()); // OK
+console.log(question.afterDate("2024-02-29")); // OK
