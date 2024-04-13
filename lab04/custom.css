@@ -1,0 +1,38 @@
+.rating {
+  transform: rotate(180deg);
+  text-align: start;
+  padding-left: 100px;
+}
+
+.rating > input {
+  display: none;
+}
+
+.rating > label {
+  transform: rotate(180deg);
+  font-size: larger;
+}
+
+.rating > label::before {
+  content: "★";
+  color: yellow;
+  position: absolute;
+  opacity: 0;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before {
+  opacity: 1 !important;
+}
+
+.rating > input:checked ~ label:before {
+  opacity: 1 !important;
+}
+
+.sidebar * {
+  background: red;
+  background-color: red;
+}
+.sidebar {
+  background-color: aqua;
+}
