@@ -1,0 +1,69 @@
+.navbar-title {
+  text-align: center;
+}
+.navbar-title * {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 40px;
+  color: #242126;
+}
+.nsvj {
+  /*background: linear-gradient(#e66465, #9198e5);*/
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  margin: 0;
+}
+
+.menu * {
+  background-color: #ebf8e1;
+  color: #242126;
+}
+.shape:hover {
+  background-color: #3f87a6;
+}
+.shape {
+  border-radius: 16px;
+  padding: 10px;
+}
+
+.calendar-border {
+  border-radius: 0.5rem;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  position: relative;
+  background: #ebf8e1;
+}
+
+.calendar-border::before,
+.calendar-border::after {
+  content: "";
+  position: absolute;
+  inset: -0.5rem;
+  z-index: -1;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #3f87a6,
+    #ebf8e1,
+    #f69d3c,
+    #ebf8e1,
+    #3f87a6
+  );
+  animation: rotation 5s linear infinite;
+}
+
+.calendar-border::after {
+  filter: blur(0.5rem);
+}
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes rotation {
+  0% {
+    --gradient-angle: 0deg;
+  }
+  100% {
+    --gradient-angle: 360deg;
+  }
+}

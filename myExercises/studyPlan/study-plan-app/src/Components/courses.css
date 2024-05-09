@@ -1,0 +1,23 @@
+.card-position {
+  border-radius: 1rem;
+  margin: 2.5rem;
+  height: 21.5rem;
+}
+
+.card-background {
+  background: #3f87a6;
+}
+
+.card-header {
+  font-weight: bold;
+  text-align: center;
+  color: #242126;
+}
+
+.table-position {
+  /*max-height: 15.5rem;*/
+  border-radius: 1rem;
+  margin: 2.5rem;
+  height: 21.5rem;
+  width: 5rem;
+}

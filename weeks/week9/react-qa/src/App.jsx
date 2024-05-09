@@ -42,16 +42,15 @@ function App() {
   const addAnswer = (answer) => {
     setAnswers((oldAnswers) => {
       const newId = Math.max(...oldAnswers.map((ans) => ans.id)) + 1;
-      // Qui sta il problema, probabilmente perchè answer.date è già un dayjs e nel costruttore viene ri trasformato in dayjs :(
-      console.log("oldAnswer: {}", answer);
+
       const newAnswer = new Answer(
         newId,
         answer.text,
         answer.email,
-        answer.email,
+        answer.date,
         0
       );
-      console.log("newAnswer: {}", newAnswer);
+
       return [...oldAnswers, newAnswer];
     });
   };
