@@ -33,24 +33,27 @@ function HomePage(props) {
               onFavoriteChange={props.onFavoriteChange}
               onRatingChange={props.onRatingChange}
               handleEdit={props.handleEdit}
+              handleDelete={props.handleDelete}
             ></ListFilm>
           </Row>
-          <Row>
-            {props.mode === "view" && (
-              <Button onClick={() => props.onClickAddNewFilm()}>
-                <i className="bi bi-plus"></i>
-              </Button>
-            )}
-            {props.mode === "add" && <FilmForm addFilm={props.addFilm} />}
 
-            {props.mode === "edit" && (
-              <FilmForm
-                film={props.editableFilm}
-                updateFilm={props.updateFilm}
-                mode={props.mode}
-              />
-            )}
-          </Row>
+          {props.mode === "view" && (
+            <Button
+              onClick={() => props.onClickAddNewFilm()}
+              className="rounded-circle fixed-right-bottom"
+            >
+              <i className="bi bi-plus"></i>
+            </Button>
+          )}
+          {props.mode === "add" && <FilmForm addFilm={props.addFilm} />}
+
+          {props.mode === "edit" && (
+            <FilmForm
+              film={props.editableFilm}
+              updateFilm={props.updateFilm}
+              mode={props.mode}
+            />
+          )}
         </Col>
       </Row>
     </>

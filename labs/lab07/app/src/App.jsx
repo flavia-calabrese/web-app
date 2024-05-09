@@ -116,9 +116,13 @@ function App() {
   function onClickAddNewFilm() {
     setMode("add");
   }
+  function handleDelete(film) {
+    setFilmsState((oldList) => {
+      return oldList.filter((f) => f.id !== film.id);
+    });
+  }
   function addFilm(film) {
     setMode("view");
-
     setFilmsState((oldFilms) => {
       const newId = Math.max(...oldFilms.map((f) => f.id)) + 1;
       const newUserId = Math.max(...oldFilms.map((f) => f.userId)) + 1;
@@ -175,6 +179,7 @@ function App() {
         handleEdit={handleEdit}
         editableFilm={editableFilm}
         updateFilm={updateFilm}
+        handleDelete={handleDelete}
       ></HomePage>
     </>
   );

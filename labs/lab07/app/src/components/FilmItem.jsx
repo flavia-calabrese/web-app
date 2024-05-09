@@ -1,7 +1,13 @@
 import { Rating } from "@mui/material";
 import { Button, Col, Form, Row } from "react-bootstrap";
 
-function FilmItem({ film, onFavoriteChange, onRatingChange, handleEdit }) {
+function FilmItem({
+  film,
+  onFavoriteChange,
+  onRatingChange,
+  handleEdit,
+  handleDelete,
+}) {
   return (
     <>
       <Row className="film-item">
@@ -28,10 +34,8 @@ function FilmItem({ film, onFavoriteChange, onRatingChange, handleEdit }) {
           />
         </Col>
         <Col>
-          <Button variant="outline-info" onClick={() => handleEdit(film)}>
-            <i className="bi bi-pen me-4"></i>
-          </Button>
-          <i className="bi bi-trash3"></i>
+          <i className="bi bi-pen me-4" onClick={() => handleEdit(film)}></i>
+          <i className="bi bi-trash3" onClick={() => handleDelete(film)}></i>
         </Col>
       </Row>
       <hr />

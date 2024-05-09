@@ -7,6 +7,7 @@ function ListFilm({
   onFavoriteChange,
   onRatingChange,
   handleEdit,
+  handleDelete,
 }) {
   return (
     <Col>
@@ -21,6 +22,7 @@ function ListFilm({
             onFavoriteChange={onFavoriteChange}
             onRatingChange={onRatingChange}
             handleEdit={handleEdit}
+            handleDelete={handleDelete}
           ></FilmItem>
         </Row>
       ))}
