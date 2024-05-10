@@ -21,9 +21,9 @@ function App() {
       MuiDateCalendar: {
         styleOverrides: {
           root: {
-            width: "40rem",
+            width: "30rem",
             heigth: "40rem",
-            marginTop: "3rem",
+            marginTop: "1rem",
             marginBottom: "3rem",
           },
         },

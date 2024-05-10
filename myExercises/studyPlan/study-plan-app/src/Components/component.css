@@ -1,3 +1,4 @@
+/* NAVBAR css*/
 .navbar-title {
   text-align: center;
 }
@@ -10,9 +11,9 @@
 .nsvj {
   /*background: linear-gradient(#e66465, #9198e5);*/
   background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
-  margin: 0;
 }
 
+/* MENU css*/
 .menu * {
   background-color: #ebf8e1;
   color: #242126;
@@ -25,10 +26,14 @@
   padding: 10px;
 }
 
+/* CALENDAR css */
+.div-calendar {
+  height: 75%;
+  width: 35rem;
+}
+
 .calendar-border {
   border-radius: 0.5rem;
-  margin-top: 3rem;
-  margin-left: 3rem;
   position: relative;
   background: #ebf8e1;
 }

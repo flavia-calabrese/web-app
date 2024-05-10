@@ -4,15 +4,16 @@ import CalendarComponent from "./CalendarComponent";
 import "./component.css";
 import zIndex from "@mui/material/styles/zIndex";
 import CoursesComponent from "./CoursesComponent";
+import { AlignHorizontalCenter, Margin } from "@mui/icons-material";
 
 export default function HomePage() {
   return (
-    <Container fluid>
-      <Row sx={{ zIndex: -2 }}>
-        <Col sx={6}>
+    <Container fluid style={{ paddingTop: "4rem" }}>
+      <Row style={{ zIndex: -2 }}>
+        <Col style={{ display: "flex", justifyContent: "center" }}>
           <CalendarComponent />
         </Col>
-        <Col sx={6}>
+        <Col style={{ display: "flex", justifyContent: "center" }}>
           <CoursesComponent />
         </Col>
       </Row>

@@ -10,8 +10,16 @@ import dayjs from "dayjs";
 
 export default function CalendarComponent() {
   return (
-    <div className="calendar-border">
-      <DateCalendar defaultValue={dayjs()} />
+    //  <div className=" div-calendar calendar-border">
+    <div
+      sx={{
+        width: "37rem",
+        background: "#3f87a6",
+        borderRadius: "1rem",
+      }}
+      className="calendar-border"
+    >
+      <DateCalendar label="Controlled calendar" defaultValue={dayjs()} />
     </div>
   );
 }

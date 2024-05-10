@@ -12,7 +12,7 @@ function NavComponent() {
   return (
     <>
       {[false].map((expand) => (
-        <Navbar key={expand} expand={expand} className="nsvj">
+        <Navbar key={expand} expand={expand} className="nsvj" fixed="top">
           <Container fluid>
             <Col xs={1}>
               <Navbar.Toggle
