@@ -1,0 +1,40 @@
+/* Links - change color on hover */
+.nav-link:hover {
+  background-color: #0a58ca;
+  color: white;
+}
+
+.nav-link:hover * {
+  color: white;
+}
+.nav-bar * {
+  color: white;
+}
+.nav-link-selected {
+  color: white;
+}
+
+.nav-link-unselected {
+  color: black;
+}
+
+.nav-item {
+  margin-top: 10px;
+}
+.film-item {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.film-item * {
+  text-align: center;
+}
+
+.fixed-right-bottom {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
