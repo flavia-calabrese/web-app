@@ -1,0 +1,43 @@
+POST http://localhost:3001/api/films
+Content-Type: application/json
+
+{
+  "idPerson": 10,
+  "title": "Topolino",
+  "isFavorite": true,
+  "watchDate": "2024-03-01",
+  "rate": 4
+}
+ 
+###
+
+PUT http://localhost:3001/api/films/3
+Content-Type: application/json
+
+{
+  "idPerson": 2,
+  "title": "star wars",
+  "isFavorite": false,
+  "watchDate": "2024-05-01",
+  "rate": 4
+}
+
+###
+PUT http://localhost:3001/api/films/3/rate
+Content-Type: application/json
+
+{
+    "rate":5
+}
+
+###
+PUT http://localhost:3001/api/films/6/favorite
+Content-Type: application/json
+
+{
+  "isFavorite": false
+}
+
+###
+DELETE http://localhost:3001/api/films/7
+Content-Type: application/json
